@@ -101,23 +101,24 @@ h1,
 
 .blue-container h2,
 .blue-container h4 {
-    color: #0edede
+    color: #0edede;
+    min-height: 57px;
 }
 
 #experience p {
     text-align: left;
 }
 
-.blue-container ul,
+.blue-container .work-experience,
 .blue-container h2 {
     transform: skewY(2deg);
 }
 
-.blue-container ul li {
+.blue-container .work-experience .work-item {
     margin-bottom: 3em;
 }
 
-.blue-container ul li p {
+.blue-container .work-experience .work-item p {
     margin-bottom: 0 .5em;
 }
 
@@ -332,14 +333,12 @@ nav ul li a:hover {
     .blue-container img {
         width: 12%;
     }
-    .blue-container ul li {
-        margin-bottom: 0;
+    .blue-container .work-experience .work-item {
+        padding: 12px;
         display: inline-block;
-        width: 33%;
+        width: 21%;
         vertical-align: top;
-    }
-    .blue-container ul li p {
-        padding: 0 .8em;
+        text-align: left;
     }
     .gray-container ul {
         display: flex;
@@ -353,7 +352,7 @@ nav ul li a:hover {
     .subhead {
         margin-bottom: 15%;
     }
-    .blue-container ul {
+    .blue-container .work-experience {
         margin: 0 0 4% 0;
     }
     .gray-container ul {
@@ -424,5 +423,19 @@ nav ul li a:hover {
     }
     .blue-container img {
         width: 15%;
+    }
+}
+
+@media (max-width:944px) {
+    .blue-container .work-experience .work-item {
+        width: 46%;
+    }
+}
+
+@media (max-width:650px) {
+    .blue-container .work-experience .work-item {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
     }
 }
